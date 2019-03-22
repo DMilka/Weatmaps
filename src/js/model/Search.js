@@ -3,7 +3,6 @@ import { apiWeatherKey } from '../config';
 
 export default class Search {
   constructor(query) {
-      //this.query = query;
       this.query = query;
   }
 

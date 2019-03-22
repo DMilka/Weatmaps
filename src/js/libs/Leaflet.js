@@ -10,7 +10,7 @@ export default class Leaflet {
     const map = this.L.map(mapid, {
       center: coords,
       zoomControl: false,
-      zoom: 13
+      zoom: 12
     });
 
 

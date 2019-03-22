@@ -15,3 +15,7 @@ export const renderMarker = (state, map, coords, icon) => {
 
   state.marker(coords, {icon: weatherIcon}).addTo(map);
 }
+
+export const clearInputValue = () => {
+  elements.searchInput.value = '';
+}
