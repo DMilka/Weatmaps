@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,800|Rubik" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+  integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+  crossorigin=""/>
+
+
+  <title>Weatmaps</title>
+</head>
+<body>
+
+
+  <section class="credits">
+    Powered by
+    <a href="https://www.apixu.com/" title="Weather API" target="_blank"> <span class="apixu">Apixu.com</span></a> &
+    <a href="https://leafletjs.com/" title="Leaflet.js" target="_blank"> <span class="leaflet">Leaflet.js</span></a> &
+    <a href="https://www.chartjs.org/" title="Chart.js" target="_blank">  <span class="chart">Chart.js</span></a>
+  </section>
+
+
+  <section class="map">
+
+
+
+    <div id="weatherMap"></div>
+
+
+    <section class="search">
+        <h1 class="search__title">Weatmap search</h1>
+        <form class="search__form">
+          <input type="text" class="search__input" placeholder="Type to search..">
+          <input type="submit" value="Search" class="search__btn" >
+        </form>
+      </section>
+
+    <!-- <section class="weather">
+        <div class="weather__info">
+          <h2 class="weather__info--title">Katowice<span class="weather__info--small">Poland</span></h2>
+          <ul class="weather__info--list">
+            <li>Temperature: 6°C</li>
+            <li>Feels temperature: 4°C</li>
+            <li>Humidity: 85%</li>
+            <li>Pressure: 1010 hPa</li>
+            <li>Wind: 20 km/h</li>
+          </ul>
+          <span class="weather__info--footer">Last update: 2019-03-16, 01:23</span>
+        </div>
+      </section>
+
+      <section class="weather-forecast">
+          <canvas id="myChart" width="600" height="250"></canvas>
+      </section> -->
+  </section>
+<script type="text/javascript" src="js/bundle.js"></script></body>
+</html>
