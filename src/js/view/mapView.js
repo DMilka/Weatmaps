@@ -28,12 +28,12 @@ export const showForecastBox = forecast => {
     <section class="weather__forecast">
       <canvas id="myChart" width="600" height="150"></canvas>
       <ul class="weather__forecast--desc active">
-        <li><img src="${forecast.forecastday[1].day.condition.icon}"></li>
-        <li><img src="${forecast.forecastday[2].day.condition.icon}"></li>
-        <li><img src="${forecast.forecastday[3].day.condition.icon}"></li>
-        <li><img src="${forecast.forecastday[4].day.condition.icon}"></li>
-        <li><img src="${forecast.forecastday[5].day.condition.icon}"></li>
-        <li><img src="${forecast.forecastday[6].day.condition.icon}"></li>
+        <li><img src="http:${forecast.forecastday[1].day.condition.icon}"></li>
+        <li><img src="http:${forecast.forecastday[2].day.condition.icon}"></li>
+        <li><img src="http:${forecast.forecastday[3].day.condition.icon}"></li>
+        <li><img src="http:${forecast.forecastday[4].day.condition.icon}"></li>
+        <li><img src="http:${forecast.forecastday[5].day.condition.icon}"></li>
+        <li><img src="http:${forecast.forecastday[6].day.condition.icon}"></li>
       </ul>
     </section> `;
 

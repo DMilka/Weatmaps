@@ -110,10 +110,10 @@ a {
 
 .weather {
   width: 300px;
-  height: 250px;
+  height: 300px;
   background-color: bisque;
   position: relative;
-  top: -300px;
+  top: -350px;
   left: 20px;
 
   z-index: 999;
@@ -168,7 +168,7 @@ a {
 
 .weather__forecast {
   width: 600px;
-  height: 250px;
+  height: 300px;
   background-color: bisque;
   position: absolute;
   bottom: 50px;
@@ -185,7 +185,7 @@ a {
 
 .weather__info--btn {
   margin-left: 43px;
-  margin-top: 7px;
+  margin-top: 25px;
   background: none;
   border:none;
   background-color: #353535;

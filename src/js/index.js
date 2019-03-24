@@ -76,8 +76,6 @@ const searchController = async () => {
       // 4. Generate weather box
       mapView.showWeatherBox(state.searchModel.result);
 
-
-
       state.leaflet.removeMarker(state.marker);
 
       // 3. Generate marker and set view
@@ -89,8 +87,50 @@ const searchController = async () => {
       console.log(e);
     }
   }
+}
+
+
+const searchByClick = async e => {
+  const query = `${e.latlng.lat} ${e.latlng.lng}`;
+  console.log(query);
+
+  const weatherBox = document.querySelector('.weather');
+  const forecastBox = document.querySelector('.weather__forecast');
+  if(weatherBox) elements.map.parentElement.removeChild(weatherBox);
+  if(forecastBox)  elements.map.parentElement.removeChild(forecastBox);
+
+  if(query) {
+    state.searchModel = new Search(query);
+
+    try {
+
+      await state.searchModel.getWeather();
+      state.forecast = state.searchModel.result.forecast;
+      // 4. Generate weather box
+      mapView.showWeatherBox(state.searchModel.result);
+
+      state.leaflet.removeMarker(state.marker);
+
+      // 3. Generate marker and set view
+      const coords = [e.latlng.lat, e.latlng.lng];
+      state.marker = state.leaflet.createMarker(coords, state.map, state.searchModel.result.current.condition.icon);
+      state.map.setView(coords, 13);
+
+    } catch(e) {
+      console.log(e);
+    }
+  }
 
 }
+
+
+state.map.addEventListener('click', e => {
+  searchByClick(e)
+ })
+
+
+
+
 
 
 elements.searchForm.addEventListener('submit', e => {
@@ -121,7 +161,3 @@ elements.mapBox.addEventListener('click', e => {
     }
   }
 });
-
-
-
-

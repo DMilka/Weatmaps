@@ -10,13 +10,14 @@ export default class Leaflet {
     const map = this.L.map(mapid, {
       center: coords,
       zoomControl: false,
-      zoom: 12
+      zoom: 11
     });
 
 
     this.L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
       attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
       maxZoom: 13,
+      minZoom: 6,
       id: 'mapbox.streets',
       accessToken: apiMapKey
     }).addTo(map);
@@ -29,7 +30,7 @@ export default class Leaflet {
       className: 'iconMarker',
       iconSize:     [64, 64],
       iconAnchor:   [64, 64],
-      iconUrl: `${icon}`
+      iconUrl: `http:${icon}`
 });
 
 
@@ -38,11 +39,16 @@ export default class Leaflet {
     markers.addTo(map);
 
     return markers;
-  }
+  };
 
   removeMarker(marker) {
     marker.remove();
-  }
+  };
+
+  getCoordsOnClick(e) {
+    console.log(e.latlng)
+    return e.latlng;
+  };
 }
 
 
